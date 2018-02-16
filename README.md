@@ -1,3 +1,4 @@
+(Forked from my previous project, a [PHP7 & Nginx Dokku Setup](https://github.com/alexleclair/Dokku-PHP7NginxContainer))
 # Dokku App for PHP7 & Apache2
 ## What is this?
 So, you're running a bunch of dokku apps on a server, and have to deal with a legacy application with no source control, and need it to be up _right now_?
@@ -22,6 +23,12 @@ On your dokku instance:
 - Build the app from this repo's tarball: `dokku tar:from my-new-app https://github.com/alexleclair/Dokku-PHP7Apache2Container/archive/master.tar.gz`
 
 And voilà!
+
+## Overriding the config
+The apache2 config looks for a `apache.conf` file within your storage folder. If it finds it, it will include it.
+
+## Sample `apache.conf` 
+See the samples [here](https://github.com/alexleclair/Dokku-PHP7Apache2Container/blob/master/samples/README.md)
 
 ## Contributing
 Pull Requests are more than welcome. This is quickly put-together _hack_ as I needed something like this kinda urgently.
